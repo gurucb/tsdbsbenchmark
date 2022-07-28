@@ -1,0 +1,25 @@
+{
+    "parallelism":
+    {
+        "num_generators":10,
+        "num_writers":20
+    },
+    "load_details":{
+        "start_date":"start date for generation",
+        "end_date":"end data for generation",
+        "precision":"timestamp percision at each point",
+        "interval":"difference between two successive time stamps",
+        "num_meters_per_city":1000,
+        "num_cities":10
+    },
+    "missing_data":{
+        "num_data_points":10,
+        "interval":"same as above"
+    },
+    "persistence_details":{
+        "target_folder":"folder path to store files",
+        "max_file_size_mb":100,
+        "row_count":5000        
+    }
+    
+}

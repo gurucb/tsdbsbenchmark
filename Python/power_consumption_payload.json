@@ -1,0 +1,13 @@
+{
+    "global_intensity":0.00,
+    "global_reactive_power":0.00,
+    "city":"[pick cities from dictionary]",
+    "voltage":230.0,
+    "global_active_power":0.00,
+    "sub_meter_1":0.0,
+    "location":"[lat,long] based on city",
+    "sub_meter_2":0.0,
+    "sub_meter_3":0.0,
+    "meter_id":"[pick meter from dictionary]",
+    "ts":1658728468714508667
+}
