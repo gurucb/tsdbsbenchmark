@@ -6,11 +6,13 @@
 3. Crate.io
 
 ### Benchmark tool capabilities will be across 5 different components.
-1. Data Generator
-2. Data Loader
-3. Query Generator
-4. Query Executor
-5. Result Aggregator
+1. Data Generator: To generate sample payload for ingestion
+2. Data Loader: Bulk and singleton ingestion to Timeseries databases
+3. Query Generator: Generate queries based on template and data apriori.
+4. Query Executor: Execute queries in parallel and measure clock times and asynchronously write to files.
+5. Result Aggregator: For each run process results and generate summaries and reports.
+
+### All of above components will have to leverage common horizontal components for configuration, logging, measuring, capturing and storing execution times. Below we will define components responsibilities in more detail.  
 
 1. Component: Data Generation        
     1. Driven by metadata JSON
@@ -33,3 +35,12 @@
     4. Also there must be module to delete databases / buckets are bulk load is over. (We start afresh every time)
     5. Bulk load will be stated with various parameters optimal for each database (configurations to be taken from JSON)
     6. Parallelism should be configured.
+
+3. Component: Query Generation 
+    1. TODO
+
+4. Component: Query Execution
+    1. TODO
+
+5. Component: Result Aggregation and Reporting
+    1. TODO
