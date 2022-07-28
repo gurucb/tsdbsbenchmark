@@ -1,24 +1,24 @@
 {
-    "parallelism":
-    {
+    "parallelism":{
         "num_generators":10,
         "num_writers":20
     },
     "load_details":{
-        "start_date":"start date for generation",
-        "end_date":"end data for generation",
-        "precision":"timestamp percision at each point",
-        "interval":"difference between two successive time stamps",
-        "num_meters_per_city":1000,
-        "num_cities":10
+        "paylaod_json_list":["C:\\source\\tsdbsbenchmark\\Python\\power_consumption_payload.json"],
+        "start_date":"2021-01-01",
+        "end_date":"2022-01-01",
+        "precision":"1ns",
+        "interval":"10s",
+        "num_meters_per_city":1,
+        "num_cities":1
     },
     "missing_data":{
+        "num_instnaces":5,
         "num_data_points":10,
-        "interval":"same as above"
+        "interval":"1"
     },
     "persistence_details":{
-        "target_folder":"folder path to store files",
-        "max_file_size_mb":100,
+        "target_folder":"c:\\todel\\",
         "row_count":5000        
     }
     
