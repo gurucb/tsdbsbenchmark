@@ -1,20 +1,21 @@
 # Benchmarking tool for Timeseries databases
 
-### Benchmarking too for Timeseries databases is used to load timeseries database with different load and access patterns. For initial iteration of tests we are considering 
+Benchmarking too for Timeseries databases is used to load timeseries database with different load and access patterns. For initial iteration of tests we are considering 
 1. InfluxDB
 2. PG + Timescale Extensions
 3. Crate.io
 
-### Benchmark tool capabilities will be across 5 different components.
-1. Data Generator: To generate sample payload for ingestion
-2. Data Loader: Bulk and singleton ingestion to Timeseries databases
-3. Query Generator: Generate queries based on template and data apriori.
-4. Query Executor: Execute queries in parallel and measure clock times and asynchronously write to files.
-5. Result Aggregator: For each run process results and generate summaries and reports.
+Benchmark tool capabilities will be across 5 different components.
 
-### All of above components will have to leverage common horizontal components for configuration, logging, measuring, capturing and storing execution times. Below we will define components responsibilities in more detail.  
+1. **Data Generator**: To generate sample payload for ingestion
+2. **Data Loader**: Bulk and singleton ingestion to Timeseries databases
+3. **Query Generator**: Generate queries based on template and data apriori.
+4. **Query Executor**: Execute queries in parallel and measure clock times and asynchronously write to files.
+5. **Result Aggregator**: For each run process results and generate summaries and reports.
 
-1. Component: Data Generation        
+All of above components will have to leverage common horizontal components for configuration, logging, measuring, capturing and storing execution times. Below we will define components responsibilities in more detail.  
+
+1. *Component: Data Generation*        
     1. Driven by metadata JSON
     2. Generates data that creates scenarios and use cases to be tested.
     3. Should be replicated by X number. Example, 
@@ -27,7 +28,7 @@
     5. File shards should be created parallel and not single file.
         1. Shard Size should be configurable either in size or no. of points.
 
-2.  Component: Data Loader (Pure Ingestion)
+2.  *Component: Data Loader* (Pure Ingestion)
     1. Bulk files created by first component should be bulk loaded into  individual databases in parallel.
     2. Both local and remove bulk loading should be supported.
     3. Each DB should have its own bulk load module and best practices configured.
@@ -36,11 +37,11 @@
     5. Bulk load will be stated with various parameters optimal for each database (configurations to be taken from JSON)
     6. Parallelism should be configured.
 
-3. Component: Query Generation 
+3. *Component: Query Generator* 
     1. TODO
 
-4. Component: Query Execution
+4. *Component: Query Execution*
     1. TODO
 
-5. Component: Result Aggregation and Reporting
+5. *Component: Result Aggregator and Reportor*
     1. TODO
