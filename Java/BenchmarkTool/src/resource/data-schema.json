@@ -1,0 +1,24 @@
+{
+    "global_intensity": {
+        "type": "float",
+        "min": 0,
+        "max" : 2
+    },
+    "global_reactive_power":{
+        "type": "float",
+        "min": 0,
+        "max" : 2
+    },
+    "city":{
+        "type" : "String"
+
+    },
+    "voltage":"float",
+    "global_active_power":"float",
+    "sub_meter_1":"float",
+    "location":"[lat,long] based on city",
+    "sub_meter_2":"float",
+    "sub_meter_3":"float",
+    "meter_id":"String",
+    "ts":1658728468714508667
+}
