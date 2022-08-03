@@ -11,7 +11,7 @@ package timeseries.benchmarktool.datagenerator;
 public class CrateDataGenerator implements DataGenerator, Runnable {
 
 	@Override
-	public void generateData(String filePath, String outputDir) {
+	public void generateData(String filePath) {
 		// TODO Auto-generated method stub
 		System.out.println("Crate DB load generator");
 		run();

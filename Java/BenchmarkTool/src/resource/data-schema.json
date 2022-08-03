@@ -1,44 +1,61 @@
 {
-  "global_intensity" : {
-    "type" : "float",
-    "min" : 0.0,
-    "max" : 2.0
+  "global_intensity": {
+    "type": "float",
+    "min": 0.0,
+    "max": 2.0
   },
-  "global_reactive_power" : {
-    "type" : "float",
-    "min" : 0.0,
-    "max" : 2.0
+  "global_reactive_power": {
+    "type": "float",
+    "min": 0.0,
+    "max": 2.0
   },
-  "city" : {
-    "type" : "String"
+  "city": {
+    "type": "String",
+    "isPredefined": true,
+    "isCorrelated" : true,
+    "predefinedValuesFile": "C:\\Repos\\tsdbsbenchmark\\Java\\BenchmarkTool\\src\\resource\\predefinedValuesDict.json"
   },
-  "voltage" : {
-    "type" : "float",
-    "min" : 240,
-    "max" : 300
+  "voltage": {
+    "type": "float",
+    "min": 240.0,
+    "max": 300.0
   },
-  "global_active_power" : {
-    "type" : "float",
-    "min" : 1.0,
-    "max" : 2.0
+  "global_active_power": {
+    "type": "float",
+    "min": 1.0,
+    "max": 2.0,
+    "hasDependents" : true
   },
-  "sub_meter_1" : {
-    "type" : "float",
-    "percent" : 0.3
+  "sub_meter_1": {
+    "type": "float",
+    "percent": 0.3,
+    "isChild": true,
+    "parentField": "global_active_power"
   },
-  "location" : "[lat,long] based on city",
+  "location": {
+    "type": "String",
+    "isPredefined": true,
+    "isCorrelated" : true,
+    "correlationFiled" : "City",
+    "predefinedValuesFile": "C:\\Repos\\tsdbsbenchmark\\Java\\BenchmarkTool\\src\\resource\\predefinedValuesDict.json"
+  },
   "sub_meter_2" : {
     "type" : "float",
-    "percent" : 0.5
+    "percent" : 0.5,
+    "isChild": true,
+    "parentField": "global_active_power"
   },
   "sub_meter_3" : {
     "type" : "float",
-    "percent" : 0.2
+    "percent" : 0.2,
+    "isChild": true,
+    "parentField": "global_active_power"
   },
   "meter_id" : {
     "type" : "String"
   },
   "ts" : {
-    "type" : "timestamp"
+    "type" : "timestamp",
+    "precision" : "Nanosecond"
   }
 }

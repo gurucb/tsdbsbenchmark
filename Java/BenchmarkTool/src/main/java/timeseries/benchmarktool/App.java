@@ -22,7 +22,8 @@ public class App
     {
         System.out.println( "Starting BenchMark Tool" );
         
-        String filePath = "C:\\Repos\\BenchmarkTool\\src\\resource\\details.json";
+        String filePath = "C:\\Repos\\tsdbsbenchmark\\Java\\BenchmarkTool\\src\\resource\\config.json";
+
         JSONParser jsonParser = new JSONParser();
         String dbType = null;
         String dataGenerationJson = null;
@@ -36,15 +37,11 @@ public class App
     	boolean loadData = true;
     	boolean generateQueries = true;
     	boolean executeQueries = true;
-        
-        
+
         try (FileReader reader = new FileReader(filePath))
         {
             //Read JSON file
             Object obj = jsonParser.parse(reader);
- 
-            System.out.println(obj.toString());
-            
             JSONObject details = (JSONObject) obj;
             
             dbType = (String) details.get("dbType");
@@ -58,6 +55,30 @@ public class App
             generateQueries = (boolean) details.get("generateQueries");
             executeQueries = (boolean) details.get("executeQueries");
             logsDir = (String) details.get("logs_dir");
+
+            if(generateData) {
+                DataGeneratorFactory dataGeneratorFactory = new DataGeneratorFactory();
+//            DataGenerator dataGenerator = dataGeneratorFactory.createDataGenerator(dbType);
+                DataGenerator dataGenerator = dataGeneratorFactory.createDataGeneratorByFormat("CSV");
+                dataGenerator.generateData(dataGenerationJson);
+
+
+            }
+            if(transformData) {
+
+            }
+
+            if(loadData) {
+                // ingest Data
+            }
+
+            if(generateQueries) {
+                // generate Queries
+            }
+
+            if(executeQueries) {
+                // execute Queries
+            }
  
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -67,28 +88,6 @@ public class App
             e.printStackTrace();
         }
         
-        if(generateData) {
-        	DataGeneratorFactory dataGeneratorFactory = new DataGeneratorFactory();
-//            DataGenerator dataGenerator = dataGeneratorFactory.createDataGenerator(dbType);
-            DataGenerator dataGenerator = dataGeneratorFactory.createDataGeneratorByType("CSV");
-            dataGenerator.generateData(dataGenerationJson, loadDataOutputDir);
 
-
-        }
-        if(transformData) {
-
-        }
-
-        if(loadData) {
-        	// ingest Data
-        }
-        
-        if(generateQueries) {
-        	// generate Queries
-        }
-        
-        if(executeQueries) {
-        	// execute Queries
-        }
     }
 }

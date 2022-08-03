@@ -1,0 +1,16 @@
+{
+	"dbType": "Timescale",
+	"data_generation_file_path": "C:\\Repos\\tsdbsbenchmark\\Java\\BenchmarkTool\\src\\resource\\data_generation_config.json",
+	"query_output_dir" : "C:\\Repos\\tsdbbenchmark\\Java\\BenchmarkTool\\src\\resource\\query",
+	"connection_string": "",
+	"source_data_files_dir" : "",
+	"ingest_data_batch_size" : "",
+	"generateData": true,
+	"transformData": true,
+	"sampleCSVfilesDir": "",
+	"loadData": true,
+	"generateQueries": true,
+	"executeQueries": true,
+	"logs_dir": "C:\\Repos\\tsdbbenchmark\\Java\\BenchmarkTool\\src\\resource\\Logs",
+	"result_dir" : "C:\\Repos\\tsdbbenchmark\\Java\\BenchmarkTool\\src\\resource\\Result"
+}

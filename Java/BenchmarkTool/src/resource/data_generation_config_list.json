@@ -1,0 +1,38 @@
+{
+    "schema_details": [
+        {
+            "schema":"C:\\Repos\\tsdbsbenchmark\\Java\\BenchmarkTool\\src\\resource\\data-schema.json",
+            "start_date":"2021-01-01",
+            "end_date":"2021-01-02",
+            "interval": 10,
+            "interval_unit": "Second",
+            "number_of_sensors_per_location":2,
+            "number_of_locations":2,
+            "location_list": "C:\\Repos\\tsdbsbenchmark\\Java\\BenchmarkTool\\src\\resource\\predefinedValuesDict.json",
+            "missing_data":{
+                "num_instances":5,
+                "num_data_points":10,
+                "interval":"1"
+            },
+            "file_name_prefix": "power_consumption",
+            "data_file_output_dir": "C:\\Repos\\tsdbsbenchmark\\Java\\BenchmarkTool\\src\\resource\\load_data\\power_consumption\\"
+        },
+        {
+            "schema":"C:\\Repos\\tsdbsbenchmark\\Java\\BenchmarkTool\\src\\resource\\data-schema.json",
+            "start_date":"2021-01-01",
+            "end_date":"2022-01-01",
+            "interval": 10,
+            "interval_unit": "Minute",
+            "number_of_sensors_per_location":1,
+            "number_of_locations":1,
+            "missing_data":{
+                "num_instances":5,
+                "num_data_points":10,
+                "interval":"1"
+            },
+            "file_name_prefix": "pc_test",
+            "data_file_output_dir": "C:\\Repos\\tsdbsbenchmark\\Java\\BenchmarkTool\\src\\resource\\load_data\\power_consumption_test\\"
+        }
+    ]
+    
+}

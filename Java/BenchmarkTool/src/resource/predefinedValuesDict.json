@@ -1,0 +1,26 @@
+{
+"predefined_mappings" :
+[
+{"city" : "Amsterdam", "location":[52.3676,4.9041]},
+{"city" : "Bangkok", "location":[13.7563, 100.5018]},
+{"city" : "Beijing", "location":[39.9042, 116.4074]},
+{"city" : "Berlin", "location":[52.5200, 13.4050]},
+{"city" : "Chicago", "location":[41.8781, 87.6298]},
+{"city" : "Delhi", "location":[11.2345, 99.3456]},
+{"city" : "Dubai", "location":[34.4343, 43.9808]},
+{"city" : "Dublin", "location":[21.3452, 89.5409]},
+{"city" : "Hong Kong", "location":[24.6767, 90.5555]},
+{"city" : "Istanbul", "location":[16.4444, 78.4424]},
+{"city" : "London", "location":[12.4567, 56.0003]},
+{"city" : "Mumbai", "location":[41.9090, 89.5454]},
+{"city" : "Munich", "location":[78.4567, 33.2345]},
+{"city" : "New York", "location":[90.3213, 34.1124]},
+{"city" : "Paris", "location":[67.2345, 45.2221]},
+{"city" : "Prague", "location":[13.3344, 33.1345]},
+{"city" : "Shanghai", "location":[99.3444, 9.1234]},
+{"city" : "Seoul", "location":[89.3434, 22.3424]},
+{"city" : "Tokyo", "location":[70.3242, 19.1232]},
+{"city" : "Zurich", "location":[66.3424, 6.2342]}
+]
+}
+

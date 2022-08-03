@@ -10,6 +10,6 @@ package timeseries.benchmarktool.datagenerator;
  */
 public interface DataGenerator {
 	
-	public void generateData(String filePath, String outputDir);
+	void generateData(String configFilePath);
 
 }

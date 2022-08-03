@@ -10,7 +10,7 @@ package timeseries.benchmarktool.datagenerator;
 public class InfluxDataGenerator implements DataGenerator, Runnable {
 
 	@Override
-	public void generateData(String filePath, String outputDir) {
+	public void generateData(String filePath) {
 		// TODO Auto-generated method stub
 		System.out.println("Influx DB load generator");
 	}
