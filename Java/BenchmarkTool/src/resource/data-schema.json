@@ -1,24 +1,44 @@
 {
-    "global_intensity": {
-        "type": "float",
-        "min": 0,
-        "max" : 2
-    },
-    "global_reactive_power":{
-        "type": "float",
-        "min": 0,
-        "max" : 2
-    },
-    "city":{
-        "type" : "String"
-
-    },
-    "voltage":"float",
-    "global_active_power":"float",
-    "sub_meter_1":"float",
-    "location":"[lat,long] based on city",
-    "sub_meter_2":"float",
-    "sub_meter_3":"float",
-    "meter_id":"String",
-    "ts":1658728468714508667
+  "global_intensity" : {
+    "type" : "float",
+    "min" : 0.0,
+    "max" : 2.0
+  },
+  "global_reactive_power" : {
+    "type" : "float",
+    "min" : 0.0,
+    "max" : 2.0
+  },
+  "city" : {
+    "type" : "String"
+  },
+  "voltage" : {
+    "type" : "float",
+    "min" : 240,
+    "max" : 300
+  },
+  "global_active_power" : {
+    "type" : "float",
+    "min" : 1.0,
+    "max" : 2.0
+  },
+  "sub_meter_1" : {
+    "type" : "float",
+    "percent" : 0.3
+  },
+  "location" : "[lat,long] based on city",
+  "sub_meter_2" : {
+    "type" : "float",
+    "percent" : 0.5
+  },
+  "sub_meter_3" : {
+    "type" : "float",
+    "percent" : 0.2
+  },
+  "meter_id" : {
+    "type" : "String"
+  },
+  "ts" : {
+    "type" : "timestamp"
+  }
 }
