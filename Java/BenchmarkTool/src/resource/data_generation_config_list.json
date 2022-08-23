@@ -7,7 +7,7 @@
             "interval": 10,
             "interval_unit": "Second",
             "number_of_sensors_per_location":2,
-            "number_of_locations":2,
+            "number_of_locations":1,
             "location_list": "C:\\Repos\\tsdbsbenchmark\\Java\\BenchmarkTool\\src\\resource\\predefinedValuesDict.json",
             "missing_data":{
                 "num_instances":5,
