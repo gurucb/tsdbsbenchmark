@@ -1,0 +1,24 @@
+{
+	"sourceDirectory":"C:\\tsbenchmarking\\data\\influx\\Avington",
+	"batchSize":3000,
+	"threadsCount":10,
+	"shouldDeleteSource":false,
+	"dbConfig":{
+		"influx":{
+			"createDBIfNotExists":false,
+			"bucketName":"bucket1",
+			"url":"",
+			"token":"Bearer Zr3PdslUx_VgNrFnM517vSOozR1JMMcBvEFe9fUAQkX8nBSjcWCY8q9LLf9EQWa6tn4i-PdRWU_Fs8qm2m99EQ==",
+			"org":"microsoft",
+			"userName":"bhunesh",
+			"password":"Microsoft@123"
+		},
+		"postgress":{
+
+		},
+		"cratedb":{
+
+		}
+		
+	}
+}

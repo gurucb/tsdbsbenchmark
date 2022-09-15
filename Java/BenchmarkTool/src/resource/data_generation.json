@@ -5,7 +5,7 @@
     },
     "load_details": [
         {
-            "paylaod_json_scehma_list":"C:\\Repos\\BenchmarkTool\\src\\resource\\data-schema.json",
+            "paylaod_json_scehma_list":"C:\\Users\\bhjaiswal\\work\\tsdbsbenchmark\\Java\\BenchmarkTool\\src\\resource\\data-schema.json",
             "start_date":"2021-01-01",
             "end_date":"2022-01-01",
             "precision":"1ns",
@@ -19,7 +19,7 @@
             }
         },
         {
-            "paylaod_json_scehma_list":"C:\\Repos\\BenchmarkTool\\src\\resource\\data-schema.json",
+            "paylaod_json_scehma_list":"C:\\Users\\bhjaiswal\\work\\tsdbsbenchmark\\Java\\BenchmarkTool\\src\\resource\\data-schema.json",
             "start_date":"2021-01-01",
             "end_date":"2022-01-01",
             "precision":"1ns",
