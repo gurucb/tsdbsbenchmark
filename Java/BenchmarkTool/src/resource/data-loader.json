@@ -8,10 +8,10 @@
 			"createDBIfNotExists":false,
 			"bucketName":"bucket1",
 			"url":"",
-			"token":"Bearer Zr3PdslUx_VgNrFnM517vSOozR1JMMcBvEFe9fUAQkX8nBSjcWCY8q9LLf9EQWa6tn4i-PdRWU_Fs8qm2m99EQ==",
+			"token":"",
 			"org":"microsoft",
-			"userName":"bhunesh",
-			"password":"Microsoft@123"
+			"userName":"",
+			"password":""
 		},
 		"postgress":{
 
