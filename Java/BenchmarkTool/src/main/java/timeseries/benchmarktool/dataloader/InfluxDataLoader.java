@@ -1,11 +1,8 @@
 package timeseries.benchmarktool.dataloader;
-
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -13,15 +10,11 @@ import java.util.ArrayList;
 import java.util.Base64;
 import java.util.Collections;
 import java.util.List;
-import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
-
 import org.influxdb.InfluxDB;
 import org.json.simple.JSONObject;
-
-import okhttp3.Credentials;
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -41,7 +34,7 @@ public class InfluxDataLoader implements DataLoader {
     
     private static List<String> listFiles(final String directory) {
         if (directory == null) {
-          return Collections.EMPTY_LIST;
+          return Collections.emptyList();
         }
         List<String> dataFilesList = new ArrayList<>();
         File[] files = new File(directory).listFiles();
@@ -120,6 +113,7 @@ public class InfluxDataLoader implements DataLoader {
 				//        mFileReader.registerHanlder(new FileLineDataHandler());
 				//        mFileReader.startRead();
 				// Approach 2 [ read points in batch and insert] 
+				//https://stackoverflow.com/questions/49811474/fastest-way-to-process-a-file-db-insert-java-multi-threading
 				//        BalanceBatch balance = new BalanceBatch(5); 
 				//        balance.startAll();
 				//        try (Stream<String> stream = Files.lines(Paths.get("C:\\tsbenchmarking\\data\\influx\\Avington\\7385C1\\7385C.txt"))) {
