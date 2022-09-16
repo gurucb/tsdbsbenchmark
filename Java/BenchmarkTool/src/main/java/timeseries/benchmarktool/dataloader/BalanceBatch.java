@@ -6,13 +6,17 @@ import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.stream.IntStream;
 
+import org.json.simple.JSONObject;
+
+
 class BalanceBatch {
     private final List<RunnableBatch> threads = new ArrayList<>();
 
     private Queue<String> queue = new ConcurrentLinkedQueue<>();
     private static final int BATCH_SIZE = 1;
-    public BalanceBatch(int nbThread) {
-        IntStream.range(0, nbThread).mapToObj(i -> new RunnableBatch(BATCH_SIZE, queue)).forEach(threads::add);
+
+    public BalanceBatch(int nbThread,JSONObject dbConfig) {
+        IntStream.range(0, nbThread).mapToObj(i -> new RunnableBatch(BATCH_SIZE, queue,dbConfig)).forEach(threads::add);
     }
 
     public void send(String value) {
@@ -37,7 +41,7 @@ class RunnableBatch implements Runnable {
     private Queue<String> queue;
     private int batchLimit;
 
-    public RunnableBatch(int batchLimit, Queue<String> queue) {
+    public RunnableBatch(int batchLimit, Queue<String> queue,JSONObject dbConfig) {
         this.batchLimit = batchLimit;
         this.queue = queue;
     }

@@ -31,6 +31,7 @@ public class InfluxDataLoader implements DataLoader {
     public String influxToken;
     public String bucketName;
     public String orgName;
+    public String dbUrl;
     
     private static List<String> listFiles(final String directory) {
         if (directory == null) {
@@ -76,7 +77,7 @@ public class InfluxDataLoader implements DataLoader {
     			System.out.println(fileContent);
     			RequestBody body = RequestBody.create(mediaType,fileContent);
     			Request request = new Request.Builder()
-    			  .url("http://localhost:8086/api/v2/write?org="+this.orgName+"&bucket="+this.bucketName+"&precision=ns")
+    			  .url(this.dbUrl+"/api/v2/write?org="+this.orgName+"&bucket="+this.bucketName+"&precision=ns")
     			  .method("POST", body)
     			  .addHeader("Authorization",this.influxToken)
     			  .addHeader("Content-Type", "text/plain")
@@ -100,7 +101,7 @@ public class InfluxDataLoader implements DataLoader {
         this.influxToken = (String) influxConfig.get("token");
         this.orgName = (String) influxConfig.get("org");
         this.bucketName = (String) influxConfig.get("bucketName");
-       
+        this.dbUrl = (String) influxConfig.get("url");
         List<String> dataFilesList = listFiles(sourceDirctory);
         
 
@@ -114,7 +115,7 @@ public class InfluxDataLoader implements DataLoader {
 				//        mFileReader.startRead();
 				// Approach 2 [ read points in batch and insert] 
 				//https://stackoverflow.com/questions/49811474/fastest-way-to-process-a-file-db-insert-java-multi-threading
-				//        BalanceBatch balance = new BalanceBatch(5); 
+				//        BalanceBatch balance = new BalanceBatch(5,influxConfig); 
 				//        balance.startAll();
 				//        try (Stream<String> stream = Files.lines(Paths.get("C:\\tsbenchmarking\\data\\influx\\Avington\\7385C1\\7385C.txt"))) {
 				//            stream.forEach(balance::send);
